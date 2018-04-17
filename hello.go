@@ -10,7 +10,9 @@ func main() {
   
   //  i++ is not an expression only a statement
   // also cannot ++i
-  for i := 1; i < len(os.Args); i++ {
+  i := 1
+  // apparently have  to include empty semicolon for init
+  for ; i < len(os.Args); i++ {
     s += sep + os.Args[i]
     sep = " "
   }
