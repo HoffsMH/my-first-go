@@ -12,9 +12,10 @@ func main() {
   // also cannot ++i
   i := 1
   // apparently have  to include empty semicolon for init
-  for ; i < len(os.Args); i++ {
+  for i < len(os.Args) {
     s += sep + os.Args[i]
     sep = " "
+    i++
   }
   fmt.Println(s)
 }
